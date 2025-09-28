@@ -1,16 +1,66 @@
-# flutter_create_state_practice_sharipov_2
+# Краткий отчёт по выполнению практической работы
+Шарипов Данис Эфбо-09-23
 
-A new Flutter project.
+## Использованные виджеты
+В ходе выполнения работы были использованы следующие виджеты Flutter: <br>
+MaterialApp - корневой виджет приложения, обеспечивающий Material Design<br>
+Scaffold - базовая структура экрана с AppBar и body<br>
+AppBar - верхняя панель навигации с заголовком<br>
+Column - вертикальное расположение дочерних виджетов<br>
+Text - отображение текстовой информации (значение счетчика)<br>
+ElevatedButton - кнопки с Material Design стилем<br>
+Container - контейнер для группировки и стилизации кнопок<br>
+Padding - добавление внутренних отступов<br>
+SizedBox - создание фиксированных промежутков между элементами<br>
+StatefulWidget - виджет с изменяемым состоянием<br>
 
-## Getting Started
+## Реализация обновления состояния<br>
+Обновление состояния реализовано с помощью паттерна StatefulWidget:<br>
+Класс состояния: Создан класс _CounterScreenState, наследуемый от State<CounterScreen><br>
+Переменная состояния: Объявлена переменная int counter = 0 для хранения текущего значения счетчика<br>
+Метод setState(): Для обновления UI при изменении состояния используется метод setState(), который:<br>
+Обновляет значение переменной counter<br>
+Уведомляет Flutter о необходимости перерисовки виджета<br>
+Вызывает метод build() для ререндера с новыми данными<br>
 
-This project is a starting point for a Flutter application.
+## Обрабатываемые события
+Были реализованы следующие пользовательские события:<br>
 
-A few resources to get you started if this is your first Flutter project:
+Обычное нажатие на кнопку "Увеличить":<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Обработчик: onPressed<br>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Действие: увеличение счетчика на 1<br>
+
+Метод: _incrementCounter()<br>
+
+Долгое нажатие на кнопку "Увеличить":<br>
+
+Обработчик: onLongPress<br>
+
+Действие: увеличение счетчика на 10<br>
+
+Метод: _incrementByTen()<br>
+
+Нажатие на кнопку "Сбросить":<br>
+
+Обработчик: onPressed<br>
+
+Действие: сброс счетчика к 0<br>
+
+Метод: _resetCounter()<br>
+
+## Архитектура решения
+Приложение построено по классической схеме Flutter:<br>
+
+MyApp (StatelessWidget) - инициализация приложения<br>
+
+CounterScreen (StatefulWidget) - основной экран<br>
+
+_CounterScreenState - состояние экрана с бизнес-логикой<br>
+
+Все элементы UI реагируют на изменения состояния через механизм реактивного обновления Flutter, обеспечивая мгновенное отображение изменений данных на<br> экране.
+
+
+
+
