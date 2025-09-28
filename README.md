@@ -28,7 +28,7 @@ StatefulWidget - виджет с изменяемым состоянием<br>
 
 Обычное нажатие на кнопку "Увеличить":<br>
 Обработчик: onPressed<br>
-![photo](Больше_10_flutter.png)
+![photo](moreten.png)
 
 Действие: увеличение счетчика на 1<br>
 Метод: _incrementCounter()<br>
@@ -46,7 +46,7 @@ StatefulWidget - виджет с изменяемым состоянием<br>
 Метод: _resetCounter()<br>
 
 ## Архитектура решения
-![photo](Сброс_Flutter.png)
+![photo](zero.jpg)
 
 Приложение построено по классической схеме Flutter:<br>
 
